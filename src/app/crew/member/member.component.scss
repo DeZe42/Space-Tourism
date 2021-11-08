@@ -22,3 +22,41 @@
         color: $light-blue;
     }
 }
+
+@media screen and (max-width: 1440px) {
+    .pilot {
+        &__sun-title {
+            text-align: center;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__title {
+            text-align: center;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        &__text {
+            text-align: center;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .pilot {
+        &__sun-title {
+            font-size: 16px;
+            line-height: 16px;
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 24px;
+        }
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}

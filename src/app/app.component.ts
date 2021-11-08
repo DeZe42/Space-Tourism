@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
 
   buttonHover: boolean = false;
+  menuOpen: boolean = false;
 
   constructor(
     public router: Router
@@ -18,5 +19,18 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  openMenu() {
+    this.menuOpen = true;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
+  navigate(route) {
+    this.router.navigateByUrl('/' + route);
+    this.closeMenu();
   }
 }

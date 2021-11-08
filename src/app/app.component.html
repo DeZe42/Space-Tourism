@@ -1,29 +1,54 @@
+<div class="space-mobile-menu" [ngClass]="{'active': menuOpen == true}">
+  <div class="space-mobile-menu__close" (click)="closeMenu()">
+    <img src="assets/icon/icon-close.svg">
+  </div>
+  <div class="space-mobile-menu__container">
+    <div class="space-mobile-menu__container--link" (click)="navigate('')">
+      <span class="number">00</span>
+      <span class="text">Home</span>
+    </div>
+    <div class="space-mobile-menu__container--link" (click)="navigate('destination')">
+      <span class="number">01</span>
+      <span class="text">Destination</span>
+    </div>
+    <div class="space-mobile-menu__container--link" (click)="navigate('crew')">
+      <span class="number">02</span>
+      <span class="text">Crew</span>
+    </div>
+    <div class="space-mobile-menu__container--link" (click)="navigate('technology')">
+      <span class="number">03</span>
+      <span class="text">Technology</span>
+    </div>
+  </div>
+</div>
 <div class="space" [ngClass]="{'destination': router.url.startsWith('/destination'), 'crew': router.url.startsWith('/crew'), 'technology': router.url.startsWith('/technology')}">
   <div class="space__header">
-    <div class="space__header--logo">
-      <img src="assets/icon/logo.svg" alt="logo">
-    </div>
-    <div class="space__header--line"></div>
-    <div class="space__header--glass">
-      <div class="link" routerLink="/" [ngClass]="{'active': router.url == '/'}">
-        <span class="link__number">00</span>
-        <span class="link__text">Home</span>
+    <div class="space__header--container">
+      <div class="logo">
+        <img src="assets/icon/logo.svg" alt="logo">
       </div>
-      <div class="link" routerLink="/destination" [ngClass]="{'active': router.url.startsWith('/destination')}">
-        <span class="link__number">01</span>
-        <span class="link__text">Destination</span>
+      <div class="line"></div>
+      <div class="glass">
+        <div class="glass__link" routerLink="/" [ngClass]="{'active': router.url == '/'}">
+          <span class="glass__link--number">00</span>
+          <span class="glass__link--text">Home</span>
+        </div>
+        <div class="glass__link" routerLink="/destination" [ngClass]="{'active': router.url.startsWith('/destination')}">
+          <span class="glass__link--number">01</span>
+          <span class="glass__link--text">Destination</span>
+        </div>
+        <div class="glass__link" routerLink="/crew" [ngClass]="{'active': router.url.startsWith('/crew')}">
+          <span class="glass__link--number">02</span>
+          <span class="glass__link--text">Crew</span>
+        </div>
+        <div class="glass__link" routerLink="/technology" [ngClass]="{'active': router.url.startsWith('/technology')}">
+          <span class="glass__link--number">03</span>
+          <span class="glass__link--text">Technology</span>
+        </div>
       </div>
-      <div class="link" routerLink="/crew" [ngClass]="{'active': router.url.startsWith('/crew')}">
-        <span class="link__number">02</span>
-        <span class="link__text">Crew</span>
+      <div class="menu" (click)="openMenu()">
+        <img src="assets/icon/icon-hamburger.svg" alt="menu">
       </div>
-      <div class="link" routerLink="/technology" [ngClass]="{'active': router.url.startsWith('/technology')}">
-        <span class="link__number">03</span>
-        <span class="link__text">Technology</span>
-      </div>
-    </div>
-    <div class="space__header--menu">
-      <img src="assets/icon/icon-hamburger.svg" alt="menu">
     </div>
   </div>
   <div class="space__content">

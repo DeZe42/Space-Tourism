@@ -3,11 +3,12 @@
 .destination {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: calc(100vh - 140px);
+    width: 100%;
+    height: 100vh;
     box-sizing: border-box;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 140px 0;
     &__header {
         display: flex;
         margin: 76px 0 64px 0;
@@ -83,34 +84,24 @@
 @media screen and (max-width: 1440px) {
     .destination {
         flex-direction: column;
-        padding: 40px;
-        height: calc(100vh - 100px);
+        padding: 140px 40px 40px 40px;
         &__header {
-            margin: 0 0 60px 0;
+            margin: 40px 0 60px 0;
             span {
+                font-size: 20px;
+                line-height: 20px;
             }
             &--number {
+                font-size: 20px;
+                line-height: 20px;
             }
         }
         &__content {
             &--image-tablet {
                 display: flex;
                 img {
-                    width: 50%;
+                    width: 30%;
                     margin: 0 auto;
-                }
-            }
-            &--navigation {
-                margin: 54px auto 32px auto;
-                .link {
-                    span {
-                    }
-                }
-            }
-            &--container {
-                margin: 0 auto;
-                .image-desktop {
-                    display: none;
                 }
             }
         }
@@ -120,21 +111,16 @@
 @media screen and (max-width: 800px) {
     .destination {
         flex-direction: column;
-        padding: 16px;
-        height: calc(100vh - 100px);
+        padding: 140px 16px 16px 16px;
         &__header {
-            margin: 0 0 60px 0;
+            margin: 24px 0 60px 0;
             span {
+                font-size: 16px;
+                line-height: 16px;
             }
             &--number {
-            }
-        }
-        &__content {
-            &--navigation {
-                .link {
-                    span {
-                    }
-                }
+                font-size: 16px;
+                line-height: 16px;
             }
         }
     }

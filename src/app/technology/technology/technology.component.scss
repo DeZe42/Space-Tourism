@@ -3,9 +3,12 @@
 .technology {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 140px);
+    height: 100vh;
+    width: 100%;
     box-sizing: border-box;
-    padding: 0 0 0 165px;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 140px 0;
     justify-content: space-between;
     &__header {
         display: flex;
@@ -60,6 +63,41 @@
                     font-size: 32px;
                     line-height: 32px;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .technology {
+        flex-direction: column;
+        padding: 140px 40px 40px 40px;
+        &__header {
+            margin: 40px 0 60px 0;
+            span {
+                font-size: 20px;
+                line-height: 20px;
+            }
+            &--number {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .technology {
+        padding: 140px 16px 16px 16px;
+        &__header {
+            margin: 24px 0 60px 0;
+            span {
+                font-size: 16px;
+                line-height: 16px;
+            }
+            &--number {
+                font-size: 16px;
+                line-height: 16px;
             }
         }
     }
