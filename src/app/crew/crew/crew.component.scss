@@ -1,0 +1,66 @@
+@import '../../shared/shared.scss';
+
+.crew {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 140px);
+    box-sizing: border-box;
+    padding: 0 165px;
+    justify-content: space-between;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: 62px 0 0 0;
+        &--header {
+            display: flex;
+            margin: 14px 0 64px 0;
+            span {
+                color: $white;
+                font-family: 'Barlow Condensed', sans-serif;
+                letter-spacing: 4.72px;
+                font-size: 28px;
+                line-height: 28px;
+                text-transform: uppercase;
+            }
+            .number {
+                margin: 0 24px 0 0;
+                opacity: 0.25;
+                font-weight: bold;
+            }
+        }
+        &--content {
+            display: flex;
+            flex-direction: column;
+            margin: auto 0;
+        }
+        &--navigation {
+            display: flex;
+            margin: 0 0 92px 0;
+            .circle {
+                cursor: pointer;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                margin: 0 24px 0 0;
+                background-color: $white;
+                opacity: 0.25;
+                &:last-child {
+                    margin: 0;
+                }
+                &.active {
+                    opacity: 1;
+                }
+                &:hover {
+                    opacity: 0.5;
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        img {
+            margin: auto 0 0 0;
+        }
+    }
+}

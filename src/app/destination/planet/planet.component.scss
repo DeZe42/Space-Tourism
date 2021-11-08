@@ -1,0 +1,106 @@
+@import '../../shared/shared.scss';
+
+.planet {
+    display: flex;
+    justify-content: space-between;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 48px;
+        &:last-child {
+            margin: 0;
+        }
+        &--title {
+            font-family: "Bellefair", sans-serif;
+            font-size: 100px;
+            line-height: 100px;
+            margin: 36px 0 14px 0;
+            color: $white;
+            text-transform: uppercase;
+        }
+        &--text {
+            font-family: "Barlow", sans-serif;
+            font-size: 18px;
+            line-height: 32px;
+            color: $light-blue;
+        }
+        &--line {
+            width: 100%;
+            height: 1px;
+            background-color: $light-blue;
+            margin: 54px 0 28px 0;
+        }
+        &--row {
+            display: flex;
+            .column {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                &__title {
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: $light-blue;
+                    letter-spacing: 2.36px;
+                    margin: 0 0 12px 0;
+                    text-transform: uppercase;
+                }
+                &__text {
+                    font-size: 28px;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .planet {
+        flex-direction: column;
+        align-items: center;
+        &__container {
+            &--title {
+                text-align: center;
+            }
+            &--text {
+                text-align: center;
+                font-size: 16px;
+                line-height: 28px;
+            }
+            &--row {
+                .column {
+                    &__title {
+                        text-align: center;
+                    }
+                    &__text {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .planet {
+        &__container {
+            &--title {
+                font-size: 56px;
+            }
+            &--text {
+                font-size: 14px;
+            }
+            &--row {
+                flex-direction: column;
+                align-items: center;
+                .column {
+                    width: 100%;
+                    &:first-child {
+                        margin: 0 0 32px 0;
+                    }
+                }
+            }
+        }
+    }
+}

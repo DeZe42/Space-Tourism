@@ -1,0 +1,37 @@
+@import '../../shared/shared.scss';
+
+.tech {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 0 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: auto 64px auto 0;
+        &--sub-title {
+            font-size: 16px;
+            line-height: 16px;
+            color: $light-blue;
+            text-transform: uppercase;
+        }
+        &--title {
+            font-size: 56px;
+            line-height: 56px;
+            color: $white;
+            text-transform: uppercase;
+            margin: 12px 0 18px 0;
+        }
+        &--text {
+            font-size: 18px;
+            line-height: 32px;
+            color: $light-blue;
+        }
+    }
+    &__img-container {
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../shared/shared.scss';
+
+.pilot {
+    display: flex;
+    flex-direction: column;
+    &__sun-title {
+        font-size: 32px;
+        line-height: 32px;
+        color: $light-blue;
+        text-transform: uppercase;
+    }
+    &__title {
+        font-size: 56px;
+        line-height: 56px;
+        color: $white;
+        margin: 16px 0 28px 0;
+        text-transform: uppercase;
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 32px;
+        color: $light-blue;
+    }
+}

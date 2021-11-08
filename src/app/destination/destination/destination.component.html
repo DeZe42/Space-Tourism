@@ -1,0 +1,39 @@
+<div class="destination">
+    <div class="destination__header">
+        <span class="destination__header--number">01</span>
+        <span class="destination__header--text">Pick your destination</span>
+    </div>
+    <div class="destination__content">
+        <div class="destination__content--image-tablet">
+            <img *ngIf="router.url == '/destination/moon'" src="assets/images/destination/image-moon.png" alt="moon">
+            <img *ngIf="router.url == '/destination/mars'" src="assets/images/destination/image-mars.png" alt="mars">
+            <img *ngIf="router.url == '/destination/europa'" src="assets/images/destination/image-europa.png" alt="europa">
+            <img *ngIf="router.url == '/destination/titan'" src="assets/images/destination/image-titan.png" alt="titan">
+        </div>
+        <div class="destination__content--navigation">
+            <div class="link" routerLink="/destination/moon" [ngClass]="{'active': router.url == '/destination/moon'}">
+                <span>Moon</span>
+            </div>
+            <div class="link" routerLink="/destination/mars" [ngClass]="{'active': router.url == '/destination/mars'}">
+                <span>Mars</span>
+            </div>
+            <div class="link" routerLink="/destination/europa" [ngClass]="{'active': router.url == '/destination/europa'}">
+                <span>Europa</span>
+            </div>
+            <div class="link" routerLink="/destination/titan" [ngClass]="{'active': router.url == '/destination/titan'}">
+                <span>Titan</span>
+            </div>
+        </div>
+        <div class="destination__content--container">
+            <div class="image-desktop">
+                <img *ngIf="router.url == '/destination/moon'" src="assets/images/destination/image-moon.png" alt="moon">
+                <img *ngIf="router.url == '/destination/mars'" src="assets/images/destination/image-mars.png" alt="mars">
+                <img *ngIf="router.url == '/destination/europa'" src="assets/images/destination/image-europa.png" alt="europa">
+                <img *ngIf="router.url == '/destination/titan'" src="assets/images/destination/image-titan.png" alt="titan">
+            </div>
+            <div class="text">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

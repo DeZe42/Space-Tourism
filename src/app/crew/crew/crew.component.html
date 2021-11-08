@@ -1,0 +1,23 @@
+<div class="crew">
+    <div class="crew__container">
+        <div class="crew__container--header">
+            <span class="number">02</span>
+            <span class="text">Meet your crew</span>
+        </div>
+        <div class="crew__container--content">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="crew__container--navigation">
+            <div class="circle" routerLink="/crew/commander" [ngClass]="{'active': router.url.startsWith('/crew/commander')}"></div>
+            <div class="circle" routerLink="/crew/specialist" [ngClass]="{'active': router.url.startsWith('/crew/specialist')}"></div>
+            <div class="circle" routerLink="/crew/pilot" [ngClass]="{'active': router.url.startsWith('/crew/pilot')}"></div>
+            <div class="circle" routerLink="/crew/engineer" [ngClass]="{'active': router.url.startsWith('/crew/engineer')}"></div>
+        </div>
+    </div>
+    <div class="crew__container">
+        <img *ngIf="router.url == '/crew/commander'" [src]="crew[0].img_url" [alt]="crew[0].name">
+        <img *ngIf="router.url == '/crew/specialist'" [src]="crew[1].img_url" [alt]="crew[1].name">
+        <img *ngIf="router.url == '/crew/pilot'" [src]="crew[2].img_url" [alt]="crew[2].name">
+        <img *ngIf="router.url == '/crew/engineer'" [src]="crew[3].img_url" [alt]="crew[3].name">
+    </div>
+</div>

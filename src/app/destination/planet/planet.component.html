@@ -1,0 +1,17 @@
+<div class="planet">
+    <div class="planet__container">
+        <span class="planet__container--title">{{ data?.name }}</span>
+        <span class="planet__container--text">{{ data?.description }}</span>
+        <div class="planet__container--line"></div>
+        <div class="planet__container--row">
+            <div class="column">
+                <span class="column__title">Avg. distance</span>
+                <span class="column__text">{{ data?.distance }} {{ data?.distance_unit }}</span>
+            </div>
+            <div class="column">
+                <span class="column__title">Est. travel time</span>
+                <span class="column__text">{{ data?.time }} {{ data?.time_unit }}</span>
+            </div>
+        </div>
+    </div>
+</div>

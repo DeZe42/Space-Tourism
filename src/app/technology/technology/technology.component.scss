@@ -1,0 +1,66 @@
+@import '../../shared/shared.scss';
+
+.technology {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 140px);
+    box-sizing: border-box;
+    padding: 0 0 0 165px;
+    justify-content: space-between;
+    &__header {
+        display: flex;
+        margin: 64px 0 28px 0;
+        span {
+            color: $white;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 4.72px;
+            font-size: 28px;
+            line-height: 28px;
+            text-transform: uppercase;
+        }
+        &--number {
+            margin: 0 24px 0 0;
+            opacity: 0.25;
+            font-weight: bold;
+        }
+    }
+    &__container {
+        display: flex;
+        margin: auto 0;
+        &--navigation {
+            display: flex;
+            flex-direction: column;
+            margin: auto 80px auto 0;
+            .circle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                border: 1px solid $light-blue;
+                cursor: pointer;
+                margin: 0 0 32px 0;
+                color: $light-blue;
+                &:last-child {
+                    margin: 0;
+                }
+                &.active {
+                    background-color: $white;
+                    color: #000;
+                }
+                &:hover {
+                    border-color: $white;
+                    color: $white;
+                    &.active {
+                        color: #000;
+                    }
+                }
+                span {
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
